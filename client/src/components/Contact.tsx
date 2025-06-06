@@ -117,142 +117,163 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-12">
+        <div className="grid lg:grid-cols-2 gap-16">
+          {/* Contact Info Cards */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="lg:col-span-2"
+            className="space-y-6"
           >
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid sm:grid-cols-2 gap-6">
-                <div>
-                  <Label htmlFor="name">Full Name *</Label>
-                  <Input
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleInputChange}
-                    placeholder="Your full name"
-                    className={errors.name ? "border-destructive" : ""}
-                  />
-                  {errors.name && (
-                    <p className="text-sm text-destructive mt-1">{errors.name}</p>
-                  )}
+            <h3 className="text-2xl font-bold mb-8">Get In Touch</h3>
+            
+            <div className="grid gap-6">
+              <div className="flex items-start space-x-4 p-6 bg-card rounded-xl shadow-sm border hover:shadow-md transition-shadow">
+                <div className="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                  <Mail className="h-6 w-6 text-primary" />
                 </div>
-
                 <div>
-                  <Label htmlFor="email">Email Address *</Label>
-                  <Input
-                    id="email"
-                    name="email"
-                    type="email"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    placeholder="your.email@example.com"
-                    className={errors.email ? "border-destructive" : ""}
-                  />
-                  {errors.email && (
-                    <p className="text-sm text-destructive mt-1">{errors.email}</p>
-                  )}
+                  <h4 className="font-semibold mb-1">Email</h4>
+                  <p className="text-muted-foreground">hello@alexjohnson.dev</p>
+                  <p className="text-sm text-muted-foreground mt-1">I'll respond within 24 hours</p>
                 </div>
               </div>
 
-              <div>
-                <Label htmlFor="subject">Subject *</Label>
-                <Input
-                  id="subject"
-                  name="subject"
-                  value={formData.subject}
-                  onChange={handleInputChange}
-                  placeholder="What's this about?"
-                  className={errors.subject ? "border-destructive" : ""}
-                />
-                {errors.subject && (
-                  <p className="text-sm text-destructive mt-1">{errors.subject}</p>
-                )}
+              <div className="flex items-start space-x-4 p-6 bg-card rounded-xl shadow-sm border hover:shadow-md transition-shadow">
+                <div className="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                  <Phone className="h-6 w-6 text-primary" />
+                </div>
+                <div>
+                  <h4 className="font-semibold mb-1">Phone</h4>
+                  <p className="text-muted-foreground">+1 (555) 123-4567</p>
+                  <p className="text-sm text-muted-foreground mt-1">Available Mon-Fri, 9AM-6PM PST</p>
+                </div>
               </div>
 
-              <div>
-                <Label htmlFor="message">Message *</Label>
-                <Textarea
-                  id="message"
-                  name="message"
-                  rows={6}
-                  value={formData.message}
-                  onChange={handleInputChange}
-                  placeholder="Tell me about your project..."
-                  className={`resize-y ${errors.message ? "border-destructive" : ""}`}
-                />
-                {errors.message && (
-                  <p className="text-sm text-destructive mt-1">{errors.message}</p>
-                )}
+              <div className="flex items-start space-x-4 p-6 bg-card rounded-xl shadow-sm border hover:shadow-md transition-shadow">
+                <div className="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                  <MapPin className="h-6 w-6 text-primary" />
+                </div>
+                <div>
+                  <h4 className="font-semibold mb-1">Location</h4>
+                  <p className="text-muted-foreground">San Francisco, CA</p>
+                  <p className="text-sm text-muted-foreground mt-1">Open to remote collaboration</p>
+                </div>
               </div>
+            </div>
 
-              <Button
-                type="submit"
-                size="lg"
-                className="w-full"
-                disabled={contactMutation.isPending}
-              >
-                {contactMutation.isPending ? (
-                  <>
-                    <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                    Sending...
-                  </>
-                ) : (
-                  "Send Message"
-                )}
-              </Button>
-            </form>
+            <div className="pt-8">
+              <h4 className="font-semibold mb-4">Follow Me</h4>
+              <div className="flex space-x-4">
+                {socialLinks.map((social, index) => (
+                  <a
+                    key={index}
+                    href={social.href}
+                    className="w-12 h-12 bg-muted rounded-xl flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-all duration-200 hover:scale-110"
+                    aria-label={social.label}
+                  >
+                    <social.icon className="h-5 w-5" />
+                  </a>
+                ))}
+              </div>
+            </div>
           </motion.div>
 
+          {/* Contact Form */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="space-y-8"
           >
-            <div className="text-center">
-              <div className="inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-lg mb-4">
-                <Mail className="h-6 w-6 text-primary" />
-              </div>
-              <h3 className="text-lg font-semibold mb-2">Email</h3>
-              <p className="text-muted-foreground">hello@alexjohnson.dev</p>
-            </div>
+            <div className="bg-card p-8 rounded-xl shadow-sm border">
+              <h3 className="text-2xl font-bold mb-6">Send Message</h3>
+              
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid sm:grid-cols-2 gap-6">
+                  <div>
+                    <Label htmlFor="name">Full Name *</Label>
+                    <Input
+                      id="name"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleInputChange}
+                      placeholder="Your full name"
+                      className={errors.name ? "border-destructive" : ""}
+                    />
+                    {errors.name && (
+                      <p className="text-sm text-destructive mt-1">{errors.name}</p>
+                    )}
+                  </div>
 
-            <div className="text-center">
-              <div className="inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-lg mb-4">
-                <Phone className="h-6 w-6 text-primary" />
-              </div>
-              <h3 className="text-lg font-semibold mb-2">Phone</h3>
-              <p className="text-muted-foreground">+1 (555) 123-4567</p>
-            </div>
+                  <div>
+                    <Label htmlFor="email">Email Address *</Label>
+                    <Input
+                      id="email"
+                      name="email"
+                      type="email"
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      placeholder="your.email@example.com"
+                      className={errors.email ? "border-destructive" : ""}
+                    />
+                    {errors.email && (
+                      <p className="text-sm text-destructive mt-1">{errors.email}</p>
+                    )}
+                  </div>
+                </div>
 
-            <div className="text-center">
-              <div className="inline-flex items-center justify-center w-12 h-12 bg-primary/10 rounded-lg mb-4">
-                <MapPin className="h-6 w-6 text-primary" />
-              </div>
-              <h3 className="text-lg font-semibold mb-2">Location</h3>
-              <p className="text-muted-foreground">San Francisco, CA</p>
-            </div>
+                <div>
+                  <Label htmlFor="subject">Subject *</Label>
+                  <Input
+                    id="subject"
+                    name="subject"
+                    value={formData.subject}
+                    onChange={handleInputChange}
+                    placeholder="What's this about?"
+                    className={errors.subject ? "border-destructive" : ""}
+                  />
+                  {errors.subject && (
+                    <p className="text-sm text-destructive mt-1">{errors.subject}</p>
+                  )}
+                </div>
 
-            <div className="pt-8 border-t">
-              <h3 className="text-lg font-semibold mb-4 text-center">Follow Me</h3>
-              <div className="flex justify-center space-x-4">
-                {socialLinks.map((social, index) => (
-                  <a
-                    key={index}
-                    href={social.href}
-                    className="w-10 h-10 bg-muted rounded-lg flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-all duration-200"
-                    aria-label={social.label}
-                  >
-                    <social.icon className="h-4 w-4" />
-                  </a>
-                ))}
-              </div>
+                <div>
+                  <Label htmlFor="message">Message *</Label>
+                  <Textarea
+                    id="message"
+                    name="message"
+                    rows={6}
+                    value={formData.message}
+                    onChange={handleInputChange}
+                    placeholder="Tell me about your project..."
+                    className={`resize-y ${errors.message ? "border-destructive" : ""}`}
+                  />
+                  {errors.message && (
+                    <p className="text-sm text-destructive mt-1">{errors.message}</p>
+                  )}
+                </div>
+
+                <Button
+                  type="submit"
+                  size="lg"
+                  className="w-full"
+                  disabled={contactMutation.isPending}
+                >
+                  {contactMutation.isPending ? (
+                    <>
+                      <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                      Sending...
+                    </>
+                  ) : (
+                    <>
+                      <Mail className="mr-2 h-4 w-4" />
+                      Send Message
+                    </>
+                  )}
+                </Button>
+              </form>
             </div>
           </motion.div>
         </div>

@@ -59,44 +59,53 @@ const Skills = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="space-y-16">
           {/* Technical Skills */}
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-2xl font-bold mb-8">Technical Skills</h3>
-
-            {technicalSkills.map((skill, index) => (
-              <div key={skill.name} className="mb-6">
-                <div className="flex justify-between mb-2">
-                  <span className="font-medium">{skill.name}</span>
-                  <span className="text-muted-foreground">{skill.percentage}%</span>
-                </div>
-                <div className="w-full bg-muted rounded-full h-2">
-                  <motion.div
-                    className="bg-primary h-2 rounded-full skill-bar"
-                    initial={{ width: 0 }}
-                    animate={isVisible ? { width: `${skill.percentage}%` } : { width: 0 }}
-                    transition={{ duration: 2, delay: index * 0.2 }}
-                  />
-                </div>
-              </div>
-            ))}
+            <h3 className="text-2xl font-bold mb-8 text-center">Technical Skills</h3>
+            
+            <div className="grid md:grid-cols-2 gap-8">
+              {technicalSkills.map((skill, index) => (
+                <motion.div
+                  key={skill.name}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.4, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="bg-card p-6 rounded-xl shadow-sm border hover:shadow-md transition-shadow"
+                >
+                  <div className="flex justify-between items-center mb-4">
+                    <span className="font-semibold text-lg">{skill.name}</span>
+                    <span className="text-2xl font-bold text-primary">{skill.percentage}%</span>
+                  </div>
+                  <div className="w-full bg-muted rounded-full h-3">
+                    <motion.div
+                      className="bg-gradient-to-r from-primary to-primary/80 h-3 rounded-full skill-bar"
+                      initial={{ width: 0 }}
+                      animate={isVisible ? { width: `${skill.percentage}%` } : { width: 0 }}
+                      transition={{ duration: 2, delay: index * 0.2 }}
+                    />
+                  </div>
+                </motion.div>
+              ))}
+            </div>
           </motion.div>
 
-          {/* Tools & Design */}
+          {/* Tools & Technologies */}
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-2xl font-bold mb-8">Tools & Design</h3>
+            <h3 className="text-2xl font-bold mb-8 text-center">Tools & Technologies</h3>
 
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-6">
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6">
               {tools.map((tool, index) => (
                 <motion.div
                   key={tool.name}
@@ -104,10 +113,12 @@ const Skills = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.4, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="text-center p-4 bg-card rounded-xl shadow-sm hover:shadow-md transition-shadow border"
+                  className="group"
                 >
-                  <div className="text-3xl mb-3">{tool.icon}</div>
-                  <div className="font-medium">{tool.name}</div>
+                  <div className="text-center p-6 bg-card rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 border group-hover:scale-105 group-hover:border-primary/20">
+                    <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">{tool.icon}</div>
+                    <div className="font-medium text-sm">{tool.name}</div>
+                  </div>
                 </motion.div>
               ))}
             </div>
