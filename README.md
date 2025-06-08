@@ -47,6 +47,20 @@ A modern, responsive personal portfolio website built with React, Express.js, an
    ```
 
 3. **Start the development server**
+
+   **For Windows users:**
+   ```cmd
+   # Option 1: Use the provided batch file
+   start.bat
+   
+   # Option 2: Set environment variable manually
+   set NODE_ENV=development && npm run dev
+   
+   # Option 3: Use PowerShell
+   $env:NODE_ENV="development"; npm run dev
+   ```
+
+   **For Mac/Linux users:**
    ```bash
    npm run dev
    ```
@@ -54,6 +68,15 @@ A modern, responsive personal portfolio website built with React, Express.js, an
 4. **Open your browser**
    - Navigate to `http://localhost:5000`
    - The application should now be running!
+
+### Windows-Specific Setup
+
+If you're on Windows and encounter the error `'NODE_ENV' is not recognized`, use one of these solutions:
+
+1. **Easiest Method**: Double-click the `start.bat` file in the project folder
+2. **Command Prompt**: Run `set NODE_ENV=development && npm run dev`
+3. **PowerShell**: Run `$env:NODE_ENV="development"; npm run dev`
+4. **Install cross-env globally**: `npm install -g cross-env` then modify the scripts in package.json
 
 ## VS Code Setup
 
