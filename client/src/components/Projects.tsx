@@ -7,7 +7,7 @@ const Projects = () => {
   const projects: Project[] = [
     {
       id: "1",
-      title: "E-Commerce Platform",
+      title: "Child Adoption System",
       description: "A modern e-commerce solution built with React and Node.js, featuring real-time inventory management and payment processing.",
       image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300",
       technologies: ["React", "Node.js", "MongoDB"],
@@ -25,7 +25,7 @@ const Projects = () => {
     },
     {
       id: "3",
-      title: "Weather Analytics Dashboard",
+      title: "Voice4Rights",
       description: "An intelligent weather dashboard with predictive analytics, historical data visualization, and location-based insights.",
       image: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300",
       technologies: ["Next.js", "TypeScript", "Chart.js"],
@@ -34,7 +34,7 @@ const Projects = () => {
     },
     {
       id: "4",
-      title: "Social Media Analytics",
+      title: "Revsis",
       description: "Comprehensive social media analytics platform with engagement tracking, sentiment analysis, and growth insights.",
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300",
       technologies: ["Angular", "Express", "D3.js"],
@@ -43,7 +43,7 @@ const Projects = () => {
     },
     {
       id: "5",
-      title: "Fitness Tracking App",
+      title: "AR-CHI-TECH",
       description: "Cross-platform fitness app with workout tracking, nutrition logging, and personalized coaching features.",
       image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300",
       technologies: ["React Native", "Firebase", "Redux"],

@@ -135,7 +135,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold mb-1">Email</h4>
-                  <p className="text-muted-foreground">hello@alexjohnson.dev</p>
+                  <p className="text-muted-foreground">shinde.pri@northeastern.edu</p>
                   <p className="text-sm text-muted-foreground mt-1">I'll respond within 24 hours</p>
                 </div>
               </div>
@@ -157,13 +157,13 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold mb-1">Location</h4>
-                  <p className="text-muted-foreground">San Francisco, CA</p>
+                  <p className="text-muted-foreground">Boston, MA</p>
                   <p className="text-sm text-muted-foreground mt-1">Open to remote collaboration</p>
                 </div>
               </div>
             </div>
 
-            <div className="pt-8">
+            {/* <div className="pt-8">
               <h4 className="font-semibold mb-4">Follow Me</h4>
               <div className="flex space-x-4">
                 {socialLinks.map((social, index) => (
@@ -177,7 +177,7 @@ const Contact = () => {
                   </a>
                 ))}
               </div>
-            </div>
+            </div> */}
           </motion.div>
 
           {/* Contact Form */}

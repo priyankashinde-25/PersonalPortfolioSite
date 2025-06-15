@@ -15,8 +15,8 @@ const Hero = () => {
   };
 
   const socialLinks = [
-    { icon: Github, href: "#", label: "GitHub" },
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
+    { icon: Github, href: "https://github.com/priyankashinde-25", label: "GitHub" },
+    { icon: Linkedin, href: "https://www.linkedin.com/in/priyanka-shinde-it/", label: "LinkedIn" },
     { icon: Twitter, href: "#", label: "Twitter" },
     { icon: Dribbble, href: "#", label: "Dribbble" },
   ];
@@ -31,7 +31,9 @@ const Hero = () => {
           className="mb-8"
         >
           <img
-            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300"
+            // src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300"
+            src="\image.png"
+            
             alt="Professional headshot"
             className="w-32 h-32 rounded-full mx-auto mb-6 shadow-lg ring-4 ring-primary/20"
           />
@@ -44,7 +46,7 @@ const Hero = () => {
           className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6"
         >
           <span className="text-foreground">Hi, I'm </span>
-          <span className="text-primary">Alex Johnson</span>
+          <span className="text-primary">Priyanka Shinde</span>
         </motion.h1>
 
         <motion.p
@@ -53,7 +55,7 @@ const Hero = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-xl sm:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto"
         >
-          Full-Stack Developer & UI/UX Designer
+          Full Stack Developer
         </motion.p>
 
         <motion.p
@@ -62,8 +64,7 @@ const Hero = () => {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="text-lg text-muted-foreground mb-12 max-w-2xl mx-auto"
         >
-          I create beautiful, functional web experiences that solve real problems and delight users. 
-          Passionate about clean code and innovative design.
+          Engineering full-stack solutions with a strong foundation in clean code, system design, and real-world problem solving.
         </motion.p>
 
         <motion.div

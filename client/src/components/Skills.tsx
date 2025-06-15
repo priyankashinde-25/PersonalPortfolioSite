@@ -14,11 +14,11 @@ const Skills = () => {
   ];
 
   const tools: Tool[] = [
-    { name: "Figma", icon: "🎨", color: "text-pink-500" },
+    // { name: "Figma", icon: "🎨", color: "text-pink-500" },
     { name: "Git", icon: "🔧", color: "text-orange-500" },
     { name: "Docker", icon: "🐳", color: "text-blue-500" },
     { name: "AWS", icon: "☁️", color: "text-yellow-500" },
-    { name: "Adobe CC", icon: "🎨", color: "text-red-500" },
+    // { name: "Adobe CC", icon: "🎨", color: "text-red-500" },
     { name: "Responsive", icon: "📱", color: "text-green-500" },
   ];
 

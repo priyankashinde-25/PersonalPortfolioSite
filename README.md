@@ -76,7 +76,7 @@ If you're on Windows and encounter the error `'NODE_ENV' is not recognized`, use
 1. **Easiest Method**: Double-click the `start.bat` file in the project folder
 2. **Command Prompt**: Run `set NODE_ENV=development && npm run dev`
 3. **PowerShell**: Run `$env:NODE_ENV="development"; npm run dev`
-4. **Install cross-env globally**: `npm install -g cross-env` then modify the scripts in package.json
+4. **Install cross-env globally**: `all npm inst-g cross-env` then modify the scripts in package.json
 
 ## VS Code Setup
 

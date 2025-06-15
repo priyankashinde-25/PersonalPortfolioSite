@@ -16,11 +16,11 @@ const Experience = () => {
   const experiences: WorkExperience[] = [
     {
       id: "1",
-      company: "TechCorp Solutions",
-      position: "Senior Full-Stack Developer",
-      location: "San Francisco, CA",
-      startDate: "Jan 2022",
-      endDate: "Present",
+      company: "Merkle inc",
+      position: "Software Engineer",
+      location: "Mumbai, India",
+      startDate: "Jun 2022",
+      endDate: "Aug 2023",
       description: [
         "Led development of a scalable e-commerce platform serving 100K+ users",
         "Implemented microservices architecture reducing system downtime by 40%",
@@ -31,11 +31,11 @@ const Experience = () => {
     },
     {
       id: "2",
-      company: "Digital Innovations Inc",
-      position: "Full-Stack Developer",
-      location: "San Jose, CA",
-      startDate: "Mar 2020",
-      endDate: "Dec 2021",
+      company: "Merkle inc",
+      position: "Summer Software Intern",
+      location: "Mumbai, India",
+      startDate: "May 2021",
+      endDate: "Aug 2021",
       description: [
         "Developed and maintained 8+ client applications using modern web technologies",
         "Optimized database queries improving application performance by 60%",
@@ -46,11 +46,11 @@ const Experience = () => {
     },
     {
       id: "3",
-      company: "StartupLab",
-      position: "Frontend Developer",
+      company: "The Sparks Foundation",
+      position: "Python Developer Intern",
       location: "Remote",
-      startDate: "Jun 2019",
-      endDate: "Feb 2020",
+      startDate: "Jun 2020",
+      endDate: "Aug 2020",
       description: [
         "Built responsive web applications for early-stage startups",
         "Collaborated with designers to implement pixel-perfect UI components",
@@ -96,10 +96,12 @@ const Experience = () => {
               }`}
             >
               {/* Timeline dot */}
-              <div className="absolute left-8 md:left-1/2 transform -translate-x-1/2 w-4 h-4 bg-primary rounded-full border-4 border-background z-10"></div>
+              {/* <div className="absolute left-8 md:left-1/2 transform -translate-x-1/2 w-4 h-4 bg-primary rounded-full border-4 border-background z-10"></div> */}
 
               {/* Content card */}
-              <div className={`flex-1 ml-16 md:ml-0 ${index % 2 === 0 ? 'md:pr-8' : 'md:pl-8'}`}>
+              
+              {/* <div className={`flex-1 ${index % 2 === 0 ? 'md:pr-8' : 'md:pl-8'}`}> */}
+              <div className={`flex-1`}>
                 <div className="bg-card p-6 rounded-xl shadow-sm border hover:shadow-md transition-shadow">
                   <div className="flex flex-wrap items-start justify-between mb-4">
                     <div>
