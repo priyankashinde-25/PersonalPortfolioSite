@@ -6,20 +6,31 @@ const Skills = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   const technicalSkills: Skill[] = [
-    { name: "JavaScript/TypeScript", percentage: 90 },
+    // { name: "JavaScript/TypeScript", percentage: 90 },
     { name: "React/Next.js", percentage: 85 },
-    { name: "Node.js/Express", percentage: 80 },
-    { name: "Python/Django", percentage: 75 },
-    { name: "Database (MongoDB, PostgreSQL)", percentage: 82 },
+    { name: "Python/Django", percentage: 80 },
+    { name: "Node.js/Express", percentage: 84 },
+    { name: "Database (MongoDB, PostgreSQL)", percentage: 85 },
+    { name: "AI/ML ", percentage: 75 },
+  { name: "Cloud Services ", percentage: 78 },
   ];
 
   const tools: Tool[] = [
-    // { name: "Figma", icon: "🎨", color: "text-pink-500" },
+    
+    { name: "Java", icon: "☕", color: "text-red-600" },
     { name: "Git", icon: "🔧", color: "text-orange-500" },
     { name: "Docker", icon: "🐳", color: "text-blue-500" },
+    { name: "SQL", icon: "🗄️", color: "text-indigo-700" },
     { name: "AWS", icon: "☁️", color: "text-yellow-500" },
+    { name: "React", icon: "⚛️", color: "text-cyan-500" },
     // { name: "Adobe CC", icon: "🎨", color: "text-red-500" },
-    { name: "Responsive", icon: "📱", color: "text-green-500" },
+    // { name: "Responsive", icon: "📱", color: "text-green-500" },
+    { name: "GraphQL", icon: "🔮", color: "text-pink-700" },
+    { name: "VS Code", icon: "🖥️", color: "text-blue-600" },
+    { name: "Jenkins", icon: "🤖", color: "text-red-600" },
+    { name: "Python", icon: "🐍", color: "text-yellow-500" },
+    { name: "Figma", icon: "🎨", color: "text-pink-500" },
+    { name: "TensorFlow", icon: "🔢", color: "text-orange-600" },
   ];
 
   useEffect(() => {

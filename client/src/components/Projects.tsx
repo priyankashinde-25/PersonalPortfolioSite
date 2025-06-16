@@ -8,28 +8,28 @@ const Projects = () => {
     {
       id: "1",
       title: "Child Adoption System",
-      description: "A modern e-commerce solution built with React and Node.js, featuring real-time inventory management and payment processing.",
+      description: "An enterprise application to manage and streamline the child adoption process. Features include secure data management, efficient matching, and tracking of adoption cases through modular microservices for scalability and reliability.",
       image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300",
-      technologies: ["React", "Node.js", "MongoDB"],
-      liveUrl: "#",
-      githubUrl: "#",
+      technologies: ["Java", "Kubernetes", "JUnit"],
+      // liveUrl: "#",
+      githubUrl: "https://github.com/priyankashinde-25/Child-Adoption-System.git",
     },
     {
       id: "2",
       title: "Task Management App",
       description: "A collaborative task management tool with real-time updates, team collaboration features, and advanced analytics.",
       image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300",
-      technologies: ["Vue.js", "Python", "PostgreSQL"],
-      liveUrl: "#",
+      technologies: ["React", "Express", "REST APIs"],
+      // liveUrl: "#",
       githubUrl: "#",
     },
     {
       id: "3",
       title: "Voice4Rights",
-      description: "An intelligent weather dashboard with predictive analytics, historical data visualization, and location-based insights.",
+      description: "A web platform built to facilitate real-time communication and support for advocacy and rights protection. It enables users to connect, share information securely, process payments, and leverage data analytics to drive informed decisions and actions.",
       image: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300",
-      technologies: ["Next.js", "TypeScript", "Chart.js"],
-      liveUrl: "#",
+      technologies: ["Stripe", "AWS Lambda", "Next.js"],
+      // liveUrl: "#",
       githubUrl: "#",
     },
     {
@@ -37,8 +37,8 @@ const Projects = () => {
       title: "Revsis",
       description: "Comprehensive social media analytics platform with engagement tracking, sentiment analysis, and growth insights.",
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300",
-      technologies: ["Angular", "Express", "D3.js"],
-      liveUrl: "#",
+      technologies: ["Natural Language Processing", "NetBeans"],
+      // liveUrl: "#",
       githubUrl: "#",
     },
     {
@@ -46,19 +46,19 @@ const Projects = () => {
       title: "AR-CHI-TECH",
       description: "Cross-platform fitness app with workout tracking, nutrition logging, and personalized coaching features.",
       image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300",
-      technologies: ["React Native", "Firebase", "Redux"],
-      liveUrl: "#",
-      githubUrl: "#",
+      technologies: ["Image Processing", "Vuforia", "Unity"],
+      // liveUrl: "#",
+      githubUrl: "https://github.com/priyankashinde-25/AR_CHI_TECH-.git",
     },
-    {
-      id: "6",
-      title: "Real Estate Platform",
-      description: "Full-featured real estate platform with property listings, virtual tours, and mortgage calculator integration.",
-      image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300",
-      technologies: ["Nuxt.js", "Laravel", "MySQL"],
-      liveUrl: "#",
-      githubUrl: "#",
-    },
+    // {
+    //   id: "6",
+    //   title: "Real Estate Platform",
+    //   description: "Full-featured real estate platform with property listings, virtual tours, and mortgage calculator integration.",
+    //   image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=300",
+    //   technologies: ["Nuxt.js", "Laravel", "MySQL"],
+    //   // liveUrl: "#",
+    //   githubUrl: "#",
+    // },
   ];
 
   return (
@@ -112,7 +112,7 @@ const Projects = () => {
                 </div>
 
                 <div className="flex space-x-4">
-                  {project.liveUrl && (
+                  {/* {project.liveUrl && (
                     <a
                       href={project.liveUrl}
                       className="text-primary hover:text-primary/80 font-medium inline-flex items-center"
@@ -120,7 +120,7 @@ const Projects = () => {
                       <ExternalLink className="mr-1 h-4 w-4" />
                       Live Demo
                     </a>
-                  )}
+                  )} */}
                   {project.githubUrl && (
                     <a
                       href={project.githubUrl}

@@ -22,12 +22,12 @@ const Experience = () => {
       startDate: "Jun 2022",
       endDate: "Aug 2023",
       description: [
-        "Led development of a scalable e-commerce platform serving 100K+ users",
-        "Implemented microservices architecture reducing system downtime by 40%",
-        "Mentored 5 junior developers and established coding best practices",
+        "Built scalable microservices using Java Spring Boot and Hibernate for high-performance distributed systems",
+        "Optimized REST APIs with Redis caching, reducing response time by 40%",
+        "Set up CI/CD pipelines with GitHub and Jenkins for streamlined deployments",
         "Collaborated with product team to deliver features ahead of schedule"
       ],
-      technologies: ["React", "Node.js", "AWS", "PostgreSQL", "Docker"]
+      technologies: ["Java", "Spring Boot", "Node.js", "AWS", "PostgreSQL", "Redis"]
     },
     {
       id: "2",
@@ -37,12 +37,12 @@ const Experience = () => {
       startDate: "May 2021",
       endDate: "Aug 2021",
       description: [
-        "Developed and maintained 8+ client applications using modern web technologies",
+        "Developed and maintained client applications using modern web technologies",
         "Optimized database queries improving application performance by 60%",
-        "Integrated third-party APIs and payment processing systems",
-        "Participated in agile development cycles and code reviews"
+        "Identified and resolved software defects to improve application stability",
+        "Prepared technical documentation and performed research to facilitate continuous learning and process improvement"
       ],
-      technologies: ["Vue.js", "Python", "Django", "MongoDB", "Redis"]
+      technologies: ["Angular", "Git", "Django", "MongoDB", "Jira"]
     },
     {
       id: "3",
@@ -52,12 +52,12 @@ const Experience = () => {
       startDate: "Jun 2020",
       endDate: "Aug 2020",
       description: [
-        "Built responsive web applications for early-stage startups",
-        "Collaborated with designers to implement pixel-perfect UI components",
-        "Established frontend development workflow and component library",
-        "Delivered 5+ projects from concept to production"
+        "Developed a supervised ML model using Python, Pandas, and Scikit-learn",
+        "Preprocessed data and optimized model to achieve 91.57% accuracy",
+        "Conducted data analysis and visualization with Matplotlib and Seaborn",
+        "Applied statistical techniques to enhance model performance"
       ],
-      technologies: ["React", "TypeScript", "SASS", "Webpack", "Jest"]
+      technologies: ["Python", "Pandas", "Visualization", "Scikit-learn", "Algorithms"]
     }
   ];
 
